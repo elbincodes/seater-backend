@@ -6,6 +6,7 @@ namespace :api do
       resources :events
       resources :tables
       resources :guest_events
+      post "login", to: "auth#create"
     end
   end
 

@@ -12,6 +12,8 @@ class Api::V1::GuestEventsController < ApplicationController
 
     def create
       @guestEvent = GuestEvent.create(guestEvent_params)
+      @events = Event.all
+      render json: @events
     end
 
   def update
